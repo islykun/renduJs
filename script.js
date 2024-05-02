@@ -18,16 +18,23 @@ function scriptHtml(data) {
     const main = document.querySelector('main');
     const phraseAccroche = data.entreprise.phraseAccroche;
     const accroche = document.createElement('h2');
+    accroche.classList.add('firsth2');
     accroche.textContent = phraseAccroche;
     main.appendChild(accroche);;
 
+    const btn = document.querySelector('.btn');
     const texteAppelAction = data.entreprise.texteAppelAction;
     const appelaction = document.createElement('button');
     appelaction.textContent = texteAppelAction;
-    main.appendChild(appelaction);
+    btn.appendChild(appelaction);
+    appelaction.addEventListener('click' , () => {
+        window.location = 'form.html';
+    })
+
 
     const tableau = data.entreprise.avantagesClients;
     const listeavantage = document.createElement('ul');
+    listeavantage.classList.add('avantagesul')
     main.appendChild(listeavantage);
 
     tableau.forEach(list => {
@@ -44,11 +51,12 @@ function scriptHtml(data) {
     activities.forEach(activity => {
         const activitiesDiv = document.createElement('div');
         activitiesDiv.classList.add('activity');
+        activitiesSection.appendChild(activitiesDiv);
         const nom = document.createElement('h3');
         nom.textContent = activity.nom;
         const description = document.createElement('p');
         description.textContent = activity.description;
-        activitiesSection.appendChild(nom);
+        activitiesDiv.appendChild(nom);
         activitiesSection.appendChild(description);
         const imageDivAct = document.createElement('div');
         imageDivAct.classList.add('img');

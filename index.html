@@ -8,29 +8,40 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /> <!--Lien vers la map-->
+    <link rel="stylesheet" href="css/pico.min.css" /> <!--Pico CSS-->
+    <script src="https://kit.fontawesome.com/261d49d62b.js" crossorigin="anonymous"></script>
+    <!--Lien vers Font awesome-->
 </head>
 
 <body>
     <header>
-    
+        <nav class="navbar">
+            <ul>
+              <li class="logo"><strong>Escape Game</strong></li>
+            </ul>
+            <div class="btn"></div>
+            <ul>
+              <li><a href="#" class="contrast"><i class="fa-solid fa-user"></i></a></li>
+              <li><a href="#" class="contrast"><i class="fa-solid fa-language"></i></a></li>
+              <li><a href="#" class="contrast"><i class="fa-solid fa-gear"></i></a></li>
+            </ul>
+          </nav>
     </header>
-    
+
     <main>
 
     </main>
 
     <footer>
-
-    <div id="map">
-    </div>
+        
+        <div id="map">
+        </div>
 
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src='script.js'></script>
 </body>
 
